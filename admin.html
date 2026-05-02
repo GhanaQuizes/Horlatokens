@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+  <title>Admin Panel</title>
+</head>
+<body>
+
+<h2>Withdrawal Requests</h2>
+<div id="list"></div>
+
+<script>
+const ADMIN_PASSWORD = "admin123"; // same as server.js
+
+function loadRequests() {
+  fetch("http://localhost:3000/withdrawals", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json"
+    },
+    body: JSON.stringify({ password: ADMIN_PASSWORD })
+  })
+    .then(res => res.json())
+    .then(data => {
+      let html = "";
+
+      if (!data || data.length === 0) {
+        html = "<p>No withdrawal requests yet</p>";
+      } else {
+        data.forEach(w => {
+          html += `
+            <div style="border:1px solid black; padding:10px; margin:10px;">
+              <p><b>Name:</b> ${w.name}</p>
+              <p><b>Amount:</b> ₵${w.amount}</p>
+              <p><b>Status:</b> ${w.status}</p>
+
+              ${
+                w.status === "pending"
+                  ? `<button onclick="approve(${w.id})">Approve</button>`
+                  : "<p>Paid</p>"
+              }
+            </div>
+          `;
+        });
+      }
+
+      document.getElementById("list").innerHTML = html;
+    })
+    .catch(err => {
+      console.error(err);
+      alert("Error loading requests");
+    });
+}
+
+function approve(id) {
+  fetch("http://localhost:3000/approve-withdrawal", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json"
+    },
+    body: JSON.stringify({
+      id: id,
+      password: ADMIN_PASSWORD
+    })
+  })
+  .then(res => res.json())
+  .then(data => {
+    if (data.error) {
+      alert(data.error);
+    } else {
+      alert("Approved & Paid!");
+      loadRequests();
+    }
+  });
+}
+
+loadRequests();
+</script>
+
+</body>
+</html>

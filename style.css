@@ -1,0 +1,172 @@
+body {
+  font-family: Arial;
+  background: #0f172a;
+  color: white;
+  text-align: center;
+}
+
+.container {
+  width: 300px;
+  margin: auto;
+  margin-top: 100px;
+}
+
+input, button {
+  width: 100%;
+  margin: 10px 0;
+  padding: 10px;
+}
+
+button {
+  background: green;
+  color: white;
+  border: none;
+}
+.profile-container {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+#profilePic {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  cursor: pointer;
+  border: 3px solid #00ff99;
+  object-fit: cover;
+}
+
+.name {
+  color: white;
+  margin-top: 10px;
+}
+
+.verified {
+  color: #00ffcc;
+  font-size: 14px;
+}
+
+.contact-box {
+  display: none;
+  margin-top: 10px;
+}
+
+.contact-btn {
+  display: inline-block;
+  margin: 5px;
+  padding: 10px 15px;
+  border-radius: 8px;
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+}
+
+.whatsapp {
+  background: #25D366;
+}
+
+.email {
+  background: #ff4444;
+}
+/* 🔥 RESET */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+/* 📱 BODY */
+body {
+  background: #0f172a;
+  color: white;
+  text-align: center;
+  padding: 10px;
+}
+
+/* 📦 MAIN CONTAINER */
+.container {
+  max-width: 500px;
+  margin: auto;
+  padding: 15px;
+}
+
+/* ❓ QUESTION */
+#question {
+  font-size: 20px;
+  margin-bottom: 15px;
+}
+
+/* ⏱ TIMER */
+#timer {
+  font-size: 16px;
+  margin-bottom: 10px;
+  color: #facc15;
+}
+
+/* 💰 BALANCE */
+#balance {
+  font-size: 18px;
+  margin-bottom: 15px;
+  color: #22c55e;
+}
+
+/* 🔘 OPTIONS */
+#options button {
+  display: block;
+  width: 100%;
+  margin: 8px 0;
+  padding: 14px;
+  font-size: 16px;
+  border: none;
+  border-radius: 10px;
+  background: #1e293b;
+  color: white;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+#options button:hover {
+  background: #334155;
+}
+
+/* 💸 BUTTONS */
+button.main-btn {
+  width: 100%;
+  padding: 14px;
+  margin-top: 10px;
+  border: none;
+  border-radius: 10px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+/* Deposit */
+.deposit {
+  background: #22c55e;
+  color: black;
+}
+
+/* Withdraw */
+.withdraw {
+  background: #ef4444;
+  color: white;
+}
+
+/* 📜 TRANSACTIONS */
+#transactions {
+  margin-top: 20px;
+  text-align: left;
+}
+
+/* 📱 MOBILE FIX */
+@media (max-width: 480px) {
+  #question {
+    font-size: 18px;
+  }
+
+  #options button {
+    font-size: 15px;
+    padding: 12px;
+  }
+}

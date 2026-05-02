@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Horla Tokens</title>
+  <link rel="stylesheet" href="style.css">
+<script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-auth-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore-compat.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+body {
+  background: #0b1a2b;
+  font-family: Arial, sans-serif;
+  color: white;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+
+/* Container */
+.container {
+  max-width: 500px;
+  margin: auto;
+  padding: 20px;
+}
+
+/* Title */
+h2 {
+  margin-bottom: 20px;
+}
+
+/* Timer */
+#timer {
+  font-size: 18px;
+  margin: 10px 0;
+  color: #00ffcc;
+}
+
+/* Question */
+#question {
+  font-size: 22px;
+  margin: 20px 0;
+  font-weight: bold;
+}
+
+/* Buttons */
+button {
+  width: 100%;
+  padding: 15px;
+  margin: 10px 0;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+/* Answer buttons */
+#options button {
+  background: #0a8f08;
+  color: white;
+}
+
+#options button:hover {
+  background: #0cc20c;
+}
+
+/* Action buttons */
+.action-btn {
+  background: #00a000;
+  font-weight: bold;
+}
+
+.action-btn:hover {
+  background: #00c800;
+}
+
+/* Withdraw button (special color) */
+.withdraw-btn {
+  background: #009688;
+}
+
+.withdraw-btn:hover {
+  background: #00bfa5;
+}
+
+/* Balance */
+#balance {
+  font-size: 18px;
+  margin-bottom: 15px;
+  color: #ffd700;
+}
+
+/* Transaction box */
+#transactions {
+  margin-top: 20px;
+  text-align: left;
+}
+
+.transaction-card {
+  background: #132c4c;
+  padding: 10px;
+  border-radius: 6px;
+  margin-bottom: 10px;
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+  <h2>Answer & Earn Horla Tokens</h2>
+<p style="color:red;">⚠️ Questions may be tricky. Read carefully!</p>
+    <h2>Transaction History</h2>
+
+  <button class="action-btn" onclick="loadTransactions()">Refresh History</button>
+  <button class="action-btn" onclick="deposit()">Deposit Money</button>
+
+  <p id="balance">Balance: ₵0</p>
+
+  <p id="timer">Time left: 10s</p>
+
+  <div id="question"></div>
+
+  <div id="options"></div>
+
+  <button class="withdraw-btn" onclick="withdraw()">Withdraw</button>
+
+  <div id="transactions"></div>
+
+</div>
+<script>
+const firebaseConfig = {
+  apiKey: "AIzaSyAKv8UI97QASjdizQJ81ebnusWoTLSHqYQ",
+  authDomain: "ghana-quiz-earn.firebaseapp.com",
+  projectId: "ghana-quiz-earn"
+};
+
+firebase.initializeApp(firebaseConfig);
+const db = firebase.firestore();
+</script>
+<script src="quiz.js"></script>
+<script src="https://js.paystack.co/v1/inline.js"></script>
+<script src="quiz.js"></script>
+<!-- 🔥 PROFILE SECTION -->
+<div class="profile-container">
+  <img src="40131a5baa3da84ba14254d65435c187~tplv-tiktokx-cropcenter_1080_1080.jpeg" id="profilePic" />
+
+  <h3 class="name">
+    Mc.Obedient <span class="verified">✔</span>
+  </h3>
+
+  <!-- Hidden Contact Popup -->
+  <div id="contactBox" class="contact-box">
+    <a href="https://wa.me/233534660385" target="_blank" class="contact-btn whatsapp">
+      WhatsApp
+    </a>
+
+    <a href="mailto:mercifulg6@gmail.com" class="contact-btn email">
+      Email
+    </a>
+  </div>
+</div>
+<script>
+const profilePic = document.getElementById("profilePic");
+const contactBox = document.getElementById("contactBox");
+
+profilePic.onclick = function () {
+  if (contactBox.style.display === "none") {
+    contactBox.style.display = "block";
+  } else {
+    contactBox.style.display = "none";
+  }
+};
+</script>
+</body>
+</html>
