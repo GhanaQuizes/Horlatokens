@@ -401,10 +401,10 @@ function withdraw() {
 
 // ================= DEPOSIT =================
 function deposit() {
-  const amount = prompt("Enter amount to deposit (minimum ₵1)");
+  const amount = prompt("Enter amount to deposit (minimum ₵20)");
 
-  if (!amount || amount < 1) {
-    alert("Minimum deposit is ₵1");
+  if (!amount || amount < 20) {
+    alert("Minimum deposit is ₵20");
     return;
   }
 
