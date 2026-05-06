@@ -226,7 +226,7 @@ function loadQuestion() {
  if (current >= questions.length) {
 
   // 🔥 LOAD NEW AI QUESTION
-  fetch("http://localhost:3000/ai-question")
+  fetch("https://horlatokens.onrender.com:3000/ai-question")
     .then(res => res.json())
     .then(q => {
 
@@ -266,7 +266,7 @@ function check(ans) {
   const user = firebase.auth().currentUser;
 
   // 1️⃣ STAKE ₵4
-  fetch("http://localhost:3000/stake", {
+  fetch("https://horlatokens.onrender.com/stake", {
     method: "POST",
     headers: {
       "Content-Type": "application/json"
@@ -293,7 +293,7 @@ function check(ans) {
 
       let reward = getReward(q.difficulty);
 
-      fetch("http://localhost:3000/reward", {
+      fetch("https://horlatokens.onrender.com/reward", {
         method: "POST",
         headers: {
           "Content-Type": "application/json"
@@ -332,7 +332,7 @@ function check(ans) {
 firebase.auth().onAuthStateChanged(user => {
   if (user) {
 
-    fetch(`http://localhost:3000/balance/${user.uid}`)
+    fetch(`https://horlatokens.onrender.com:/balance/${user.uid}`)
       .then(res => res.json())
       .then(data => {
         balance = data.balance || 0;
@@ -369,7 +369,7 @@ function withdraw() {
 
   const user = firebase.auth().currentUser;
 
-  fetch("http://localhost:3000/withdraw", {
+  fetch("https://horlatokens.onrender.com/withdraw", {
     method: "POST",
     headers: {
       "Content-Type": "application/json"
@@ -403,8 +403,8 @@ function withdraw() {
 function deposit() {
   const amount = prompt("Enter amount to deposit (minimum ₵20)");
 
-  if (!amount || amount < 20) {
-    alert("Minimum deposit is ₵20");
+  if (!amount || amount < 1) {
+    alert("Minimum deposit is ₵1");
     return;
   }
 
@@ -418,7 +418,7 @@ function deposit() {
 
     callback: function(response) {
 
-      fetch("http://localhost:3000/verify-payment", {
+      fetch("https://horlatokens.onrender.com/verify-payment", {
         method: "POST",
         headers: {
           "Content-Type": "application/json"
@@ -433,7 +433,7 @@ function deposit() {
         if (data.success) {
           alert("Deposit successful!");
 
-          fetch(`http://localhost:3000/balance/${user.uid}`)
+          fetch(`https://horlatokens.onrender.com/balance/${user.uid}`)
             .then(res => res.json())
             .then(data => {
               balance = data.balance;
@@ -462,7 +462,7 @@ function loadTransactions() {
   const user = firebase.auth().currentUser;
   if (!user) return;
 
-  fetch("http://localhost:3000/transactions/" + user.uid)
+  fetch("https://horlatokens.onrender.com/transactions/" + user.uid)
     .then(res => res.json())
     .then(data => {
 
