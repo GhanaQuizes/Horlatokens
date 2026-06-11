@@ -1,268 +1,378 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <script>(function(s){s.dataset.zone='10960796',s.src='https://al5sm.com/tag.min.js'})([document.documentElement, document.body].filter(Boolean).pop().appendChild(document.createElement('script')))</script>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Ghana Quiz Earn</title>
 
+<meta name="description" content="Play quizzes, learn Ghana history, earn rewards and withdraw instantly.">
+
+<!-- Adsense -->
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1849701324178459"
+crossorigin="anonymous"></script>
+
 <style>
-body{
-  background:#0f172a;
-  color:white;
-  font-family:Arial,sans-serif;
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Segoe UI',sans-serif;
 }
 
+body{
+background:#0f172a;
+color:white;
+overflow-x:hidden;
+}
+
+/* HERO */
+
 .hero{
-  padding:60px 20px;
-  text-align:center;
+min-height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+padding:30px;
+text-align:center;
+background:
+linear-gradient(
+135deg,
+#0f172a,
+#1e293b,
+#0f172a
+);
+}
+
+.hero-content{
+max-width:700px;
+}
+
+.hero-avatar{
+width:180px;
+height:180px;
+border-radius:50%;
+object-fit:cover;
+border:5px solid #22c55e;
+box-shadow:0 0 40px rgba(34,197,94,.8);
 }
 
 .hero h1{
-  font-size:40px;
-  color:#22c55e;
-  margin-bottom:10px;
+font-size:60px;
+margin-top:20px;
+color:#22c55e;
 }
 
 .hero p{
-  color:#cbd5e1;
-  margin-bottom:30px;
-}
-
-.hero-buttons{
-  display:flex;
-  gap:15px;
-  justify-content:center;
-  flex-wrap:wrap;
-}
-
-.btn{
-  border:none;
-  padding:15px 25px;
-  border-radius:15px;
-  cursor:pointer;
-  font-size:16px;
-  font-weight:bold;
-  transition:.3s;
-}
-
-.signup{
-  background:#22c55e;
-  color:black;
-}
-
-.login{
-  background:#3b82f6;
-  color:white;
-}
-
-.btn:hover{
-  transform:translateY(-3px);
-}
-
-.container{
-  max-width:1100px;
-  margin:auto;
-  padding:20px;
-}
-
-.stats{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(150px,1fr));
-  gap:20px;
-  margin-bottom:30px;
-}
-
-.stat-card{
-  background:rgba(255,255,255,.05);
-  backdrop-filter:blur(10px);
-  border-radius:20px;
-  padding:25px;
-  text-align:center;
-}
-
-.stat-card h2{
-  color:#22c55e;
-}
-
-.card{
-  background:rgba(255,255,255,.05);
-  backdrop-filter:blur(12px);
-  border-radius:20px;
-  padding:20px;
-  margin-bottom:20px;
-}
-
-.card h3{
-  color:#22c55e;
-  margin-bottom:10px;
-}
-
-.card p{
-  line-height:1.8;
-  color:#e2e8f0;
-}
-
-.founder{
-  text-align:center;
-}
-
-.founder img{
-  width:120px;
-  height:120px;
-  border-radius:50%;
-  object-fit:cover;
-  margin-bottom:15px;
+font-size:20px;
+margin-top:10px;
+color:#cbd5e1;
 }
 
 .verified{
-  background:#1877f2;
-  padding:4px 10px;
-  border-radius:20px;
-  font-size:12px;
+display:inline-block;
+margin-top:15px;
+background:#1877f2;
+padding:10px 20px;
+border-radius:50px;
+font-weight:bold;
 }
 
-.socials{
-  margin-top:15px;
+.hero-buttons{
+margin-top:30px;
 }
 
-.socials a{
-  text-decoration:none;
-  color:white;
-  background:#22c55e;
-  padding:10px 20px;
-  border-radius:10px;
-  margin:5px;
-  display:inline-block;
+.btn{
+padding:15px 35px;
+border:none;
+border-radius:15px;
+font-size:18px;
+cursor:pointer;
+margin:5px;
+transition:.3s;
+font-weight:bold;
 }
+
+.btn:hover{
+transform:translateY(-3px);
+}
+
+.signup{
+background:#22c55e;
+color:black;
+}
+
+.login{
+background:#2563eb;
+color:white;
+}
+
+/* STATS */
+
+.stats{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(150px,1fr));
+gap:20px;
+padding:30px;
+max-width:1000px;
+margin:auto;
+}
+
+.stat{
+background:#1e293b;
+padding:25px;
+border-radius:20px;
+text-align:center;
+box-shadow:0 10px 30px rgba(0,0,0,.3);
+}
+
+.stat h2{
+color:#22c55e;
+font-size:32px;
+}
+
+/* CARDS */
+
+.glass-card{
+max-width:1000px;
+margin:20px auto;
+padding:25px;
+border-radius:20px;
+background:rgba(255,255,255,.05);
+backdrop-filter:blur(20px);
+border:1px solid rgba(255,255,255,.1);
+}
+
+.glass-card h3{
+margin-bottom:15px;
+color:#22c55e;
+}
+
+.glass-card p{
+line-height:1.8;
+color:#cbd5e1;
+}
+
+/* FOUNDER */
+
+.founder{
+max-width:600px;
+margin:40px auto;
+padding:30px;
+text-align:center;
+background:#1e293b;
+border-radius:25px;
+}
+
+.founder-img{
+width:160px;
+height:160px;
+border-radius:50%;
+object-fit:cover;
+border:4px solid #22c55e;
+}
+
+.badge{
+background:#1877f2;
+padding:5px 12px;
+border-radius:30px;
+font-size:12px;
+}
+
+.contact{
+margin-top:20px;
+}
+
+.contact a{
+display:inline-block;
+padding:12px 25px;
+margin:5px;
+border-radius:12px;
+text-decoration:none;
+color:white;
+font-weight:bold;
+}
+
+.whatsapp{
+background:#25D366;
+}
+
+.email{
+background:#2563eb;
+}
+
+/* FOOTER */
 
 footer{
-  padding:25px;
-  text-align:center;
-  color:#94a3b8;
+padding:30px;
+text-align:center;
+color:#94a3b8;
 }
 
 @media(max-width:768px){
-  .hero h1{
-    font-size:30px;
-  }
+
+.hero h1{
+font-size:36px;
 }
+
+.hero-avatar{
+width:130px;
+height:130px;
+}
+
+.btn{
+width:100%;
+}
+
+}
+
 </style>
+<script>(function(s){s.dataset.zone='10960796',s.src='https://al5sm.com/tag.min.js'})([document.documentElement, document.body].filter(Boolean).pop().appendChild(document.createElement('script')))</script>
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1849701324178459"
      crossorigin="anonymous"></script>
 <meta name="monetag" content="a9d10824ed7ee564d0a3d9b9c51c00e0">
 <script src="https://quge5.com/88/tag.min.js" data-zone="235990" async data-cfasync="false"></script>
+
 </head>
 
 <body>
 
-<body>
+<section class="hero">
 
-<header class="hero">
-  <h1>🇬🇭 Ghana Quiz Earn</h1>
-  <p>Test Your Knowledge • Earn Rewards • Withdraw Securely</p>
+<div class="hero-content">
 
-  <div class="hero-buttons">
-    <button class="btn signup"
-      onclick="window.location.href='signup.html'">
-      🚀 Create Account
-    </button>
+<img src="mcobedient.jpg" class="hero-avatar">
 
-    <button class="btn login"
-      onclick="window.location.href='login.html'">
-      🔐 Login
-    </button>
-  </div>
-</header>
+<h1>🇬🇭 Ghana Quiz Earn</h1>
 
-<div class="container">
+<p>
+Learn • Earn • Withdraw Instantly
+</p>
 
-  <div class="stats">
-    <div class="stat-card">
-      <h2>100+</h2>
-      <span>Questions</span>
-    </div>
+<div class="verified">
+✓ Mc.Obedient • Verified Founder
+</div>
 
-    <div class="stat-card">
-      <h2>₵50</h2>
-      <span>Min Withdrawal</span>
-    </div>
+<div class="hero-buttons">
 
-    <div class="stat-card">
-      <h2>24/7</h2>
-      <span>Available</span>
-    </div>
-  </div>
+<button class="btn signup"
+onclick="window.location.href='signup.html'">
+Create Account
+</button>
 
-  <div class="card">
-    <h3>💡 How It Works</h3>
+<button class="btn login"
+onclick="window.location.href='login.html'">
+Login
+</button>
 
-    <p>
-      ✅ Deposit at least ₵20<br>
-      ✅ Answer quiz questions<br>
-      ✅ Earn rewards for correct answers<br>
-      ✅ Withdraw from ₵50
-    </p>
-  </div>
+</div>
 
-  <div class="card">
-    <h3>🏆 Why Join?</h3>
+</div>
 
-    <p>
-      Learn Ghana History, Culture and Current Affairs while earning rewards.
-      Challenge yourself with difficult questions and compete with friends.
-    </p>
-  </div>
+</section>
 
-  <div class="card founder">
-    <img src="your-image.jpg" alt="Founder">
+<section class="stats">
 
-    <h3>
-      Mc.Obedient
-      <span class="verified">✓ Meta Verified</span>
-    </h3>
+<div class="stat">
+<h2>₵50</h2>
+<span>Minimum Withdrawal</span>
+</div>
 
-    <p>
-      Founder & Creator of Ghana Quiz Earn
-    </p>
+<div class="stat">
+<h2>24/7</h2>
+<span>Online Access</span>
+</div>
 
-    <div class="socials">
-      <a href="https://wa.me/233534660385">
-        WhatsApp
-      </a>
+<div class="stat">
+<h2>100+</h2>
+<span>Quiz Questions</span>
+</div>
 
-      <a href="mailto:mercifulg6@gmail.com">
-        Email
-      </a>
-    </div>
-  </div>
+</section>
 
-  <div class="card">
-    <h3>🔐 Privacy Policy</h3>
+<div class="glass-card">
+<h3>💡 How It Works</h3>
 
-    <p>
-      We respect your privacy. Personal information is securely stored and never sold.
-    </p>
-  </div>
+<p>
+1. Create an account.<br>
+2. Deposit at least ₵20.<br>
+3. Answer quiz questions.<br>
+4. Earn rewards for correct answers.<br>
+5. Withdraw when you reach ₵50.
+</p>
+</div>
 
-  <div class="card">
-    <h3>📜 Terms & Conditions</h3>
+<div class="glass-card">
+<h3>📖 About Us</h3>
 
-    <p>
-      Users must provide accurate information.
-      Fraudulent activity may result in account suspension.
-      Deposits are non-refundable.
-    </p>
-  </div>
+<p>
+Ghana Quiz Earn is an educational rewards platform that allows users
+to test their knowledge while earning rewards. Our mission is to make
+learning fun, engaging and rewarding.
+</p>
+</div>
+
+<div class="glass-card">
+<h3>🔒 Privacy Policy</h3>
+
+<p>
+We respect your privacy. User information is protected and never sold
+to third parties. Payments are processed securely through trusted
+providers.
+</p>
+</div>
+
+<div class="glass-card">
+<h3>📜 Terms & Conditions</h3>
+
+<p>
+Users must provide accurate information.
+Fraudulent activity may result in suspension.
+Minimum withdrawal is ₵50.
+Deposits are non-refundable.
+</p>
+</div>
+
+<div class="founder">
+
+<img src="mcobedient.jpg" class="founder-img">
+
+<h2>
+Mc.Obedient
+<span class="badge">Verified</span>
+</h2>
+
+<p style="margin-top:10px;color:#cbd5e1;">
+Founder • Creator • Music Artist
+</p>
+
+<div class="contact">
+
+<a class="whatsapp"
+href="https://wa.me/233534660385">
+WhatsApp
+</a>
+
+<a class="email"
+href="mailto:mercifulg6@gmail.com">
+Email
+</a>
+
+</div>
 
 </div>
 
 <footer>
-  © 2026 Ghana Quiz Earn • All Rights Reserved
+
+<p>
+© 2026 Ghana Quiz Earn. All Rights Reserved.
+</p>
+
 </footer>
 
 </body>
-  
-</body>
 </html>
+```
