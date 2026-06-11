@@ -8,99 +8,144 @@
 <title>Ghana Quiz Earn</title>
 
 <style>
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: Arial, sans-serif;
+body{
+  background:#0f172a;
+  color:white;
+  font-family:Arial,sans-serif;
 }
 
-body {
-  background: linear-gradient(135deg, #0f172a, #1e293b);
-  color: white;
-  text-align: center;
+.hero{
+  padding:60px 20px;
+  text-align:center;
 }
 
-/* HEADER */
-header {
-  padding: 20px;
+.hero h1{
+  font-size:40px;
+  color:#22c55e;
+  margin-bottom:10px;
 }
 
-header h1 {
-  font-size: 26px;
-  color: #22c55e;
+.hero p{
+  color:#cbd5e1;
+  margin-bottom:30px;
 }
 
-header p {
-  font-size: 14px;
-  color: #cbd5f5;
+.hero-buttons{
+  display:flex;
+  gap:15px;
+  justify-content:center;
+  flex-wrap:wrap;
 }
 
-/* MAIN CONTAINER */
-.container {
-  max-width: 500px;
-  margin: auto;
-  padding: 20px;
+.btn{
+  border:none;
+  padding:15px 25px;
+  border-radius:15px;
+  cursor:pointer;
+  font-size:16px;
+  font-weight:bold;
+  transition:.3s;
 }
 
-/* BUTTONS */
-.btn {
-  display: block;
-  width: 100%;
-  padding: 14px;
-  margin: 10px 0;
-  border: none;
-  border-radius: 10px;
-  font-size: 16px;
-  cursor: pointer;
-  transition: 0.3s;
+.signup{
+  background:#22c55e;
+  color:black;
 }
 
-.signup {
-  background: #22c55e;
-  color: black;
+.login{
+  background:#3b82f6;
+  color:white;
 }
 
-.login {
-  background: #3b82f6;
-  color: white;
+.btn:hover{
+  transform:translateY(-3px);
 }
 
-.btn:hover {
-  opacity: 0.85;
+.container{
+  max-width:1100px;
+  margin:auto;
+  padding:20px;
 }
 
-/* CARD */
-.card {
-  background: #1e293b;
-  padding: 15px;
-  border-radius: 12px;
-  margin-top: 20px;
-  text-align: left;
+.stats{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(150px,1fr));
+  gap:20px;
+  margin-bottom:30px;
 }
 
-.card h3 {
-  margin-bottom: 10px;
-  color: #22c55e;
+.stat-card{
+  background:rgba(255,255,255,.05);
+  backdrop-filter:blur(10px);
+  border-radius:20px;
+  padding:25px;
+  text-align:center;
 }
 
-.card p {
-  font-size: 14px;
-  line-height: 1.6;
-  color: #cbd5f5;
+.stat-card h2{
+  color:#22c55e;
 }
 
-/* FOOTER */
-footer {
-  margin-top: 30px;
-  font-size: 12px;
-  color: #94a3b8;
+.card{
+  background:rgba(255,255,255,.05);
+  backdrop-filter:blur(12px);
+  border-radius:20px;
+  padding:20px;
+  margin-bottom:20px;
 }
 
-/* MOBILE */
-@media(max-width:480px){
-  header h1 {
-    font-size: 22px;
+.card h3{
+  color:#22c55e;
+  margin-bottom:10px;
+}
+
+.card p{
+  line-height:1.8;
+  color:#e2e8f0;
+}
+
+.founder{
+  text-align:center;
+}
+
+.founder img{
+  width:120px;
+  height:120px;
+  border-radius:50%;
+  object-fit:cover;
+  margin-bottom:15px;
+}
+
+.verified{
+  background:#1877f2;
+  padding:4px 10px;
+  border-radius:20px;
+  font-size:12px;
+}
+
+.socials{
+  margin-top:15px;
+}
+
+.socials a{
+  text-decoration:none;
+  color:white;
+  background:#22c55e;
+  padding:10px 20px;
+  border-radius:10px;
+  margin:5px;
+  display:inline-block;
+}
+
+footer{
+  padding:25px;
+  text-align:center;
+  color:#94a3b8;
+}
+
+@media(max-width:768px){
+  .hero h1{
+    font-size:30px;
   }
 }
 </style>
@@ -112,65 +157,112 @@ footer {
 
 <body>
 
-<header>
+<body>
+
+<header class="hero">
   <h1>🇬🇭 Ghana Quiz Earn</h1>
-  <p>Play Quiz • Earn Money • Withdraw Instantly</p>
+  <p>Test Your Knowledge • Earn Rewards • Withdraw Securely</p>
+
+  <div class="hero-buttons">
+    <button class="btn signup"
+      onclick="window.location.href='signup.html'">
+      🚀 Create Account
+    </button>
+
+    <button class="btn login"
+      onclick="window.location.href='login.html'">
+      🔐 Login
+    </button>
+  </div>
 </header>
 
 <div class="container">
 
-  <!-- ACTION BUTTONS -->
-  <button class="btn signup" onclick="window.location.href='signup.html'">
-    Create Account
-  </button>
+  <div class="stats">
+    <div class="stat-card">
+      <h2>100+</h2>
+      <span>Questions</span>
+    </div>
 
-  <button class="btn login" onclick="window.location.href='login.html'">
-    Login
-  </button>
+    <div class="stat-card">
+      <h2>₵50</h2>
+      <span>Min Withdrawal</span>
+    </div>
 
-  <!-- HOW IT WORKS -->
+    <div class="stat-card">
+      <h2>24/7</h2>
+      <span>Available</span>
+    </div>
+  </div>
+
   <div class="card">
     <h3>💡 How It Works</h3>
+
     <p>
-      1. Deposit at least ₵20<br>
-      2. Answer quiz questions<br>
-      3. Earn rewards per correct answer<br>
-      4. Withdraw when you reach ₵50
+      ✅ Deposit at least ₵20<br>
+      ✅ Answer quiz questions<br>
+      ✅ Earn rewards for correct answers<br>
+      ✅ Withdraw from ₵50
     </p>
   </div>
 
-  <!-- ABOUT -->
   <div class="card">
-    <h3>📖 About Us</h3>
+    <h3>🏆 Why Join?</h3>
+
     <p>
-      Ghana Quiz Earn is an online quiz platform where users test their knowledge 
-      and earn rewards. Our goal is to make learning fun and rewarding.
+      Learn Ghana History, Culture and Current Affairs while earning rewards.
+      Challenge yourself with difficult questions and compete with friends.
     </p>
   </div>
 
-  <!-- PRIVACY POLICY -->
+  <div class="card founder">
+    <img src="your-image.jpg" alt="Founder">
+
+    <h3>
+      Mc.Obedient
+      <span class="verified">✓ Meta Verified</span>
+    </h3>
+
+    <p>
+      Founder & Creator of Ghana Quiz Earn
+    </p>
+
+    <div class="socials">
+      <a href="https://wa.me/233534660385">
+        WhatsApp
+      </a>
+
+      <a href="mailto:mercifulg6@gmail.com">
+        Email
+      </a>
+    </div>
+  </div>
+
   <div class="card">
     <h3>🔐 Privacy Policy</h3>
+
     <p>
-      We respect your privacy. Your personal data (email, phone number) is securely stored 
-      and never shared with third parties. Payments are processed securely via trusted providers.
+      We respect your privacy. Personal information is securely stored and never sold.
     </p>
   </div>
 
-  <!-- TERMS -->
   <div class="card">
     <h3>📜 Terms & Conditions</h3>
+
     <p>
-      Users must provide accurate information. Any fraudulent activity will result in account suspension.
-      Minimum withdrawal is ₵50. Deposits are non-refundable.
+      Users must provide accurate information.
+      Fraudulent activity may result in account suspension.
+      Deposits are non-refundable.
     </p>
   </div>
 
 </div>
 
 <footer>
-  <p>© 2026 Ghana Quiz Earn | All Rights Reserved</p>
+  © 2026 Ghana Quiz Earn • All Rights Reserved
 </footer>
 
+</body>
+  
 </body>
 </html>
